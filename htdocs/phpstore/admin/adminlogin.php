@@ -1,5 +1,25 @@
 <?php
 include('adminpartials/head.php');
+
+if (isset($_POST['login'])){
+
+    include('../partials/connect.php');
+
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $sql="SELECT username,password FROM admins WHERE username='$email' AND password='$password'";   
+    $results=$connect->query($sql);
+    $final=$results->fetch_assoc();
+
+    if ($email==$final['username'] && $password==$final['password']){
+        header('location: adminindex.php');
+    }else{
+         header('location: adminlogin.php');
+    }
+
+}
+
+
 ?>
 
 <div class="row">
@@ -14,7 +34,7 @@ include('adminpartials/head.php');
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal" action="loginhandler.php" method="POST">
+            <form class="form-horizontal" action="adminlogin.php" method="POST">
               <div class="box-body">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -37,9 +57,8 @@ include('adminpartials/head.php');
                 </div>
               </div>
               <!-- /.box-body -->
-              <div class="box-footer">
-                <button type="submit" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-info pull-right">Sign in</button>
+              <div class="box-footer">               
+                <button type="submit" class="btn btn-info pull-right" name="login">Log in</button>
               </div>
               <!-- /.box-footer -->
             </form>
