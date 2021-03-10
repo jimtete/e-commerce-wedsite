@@ -43,6 +43,10 @@ include ("adminpartials/head.php");
                                 <button>Update</button>
 
                             </a>
+                            <a href="prodelete.php?del_id=<?php echo $final['id']?>">
+                                <button style="color:#f74d40">Delete</button>
+
+                            </a>
                             <hr>
 
                             <?php
