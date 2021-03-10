@@ -28,6 +28,13 @@ include ("adminpartials/head.php");
         <section class="content">
             <div class="row">
                 <div class="col-sm-9">
+                <a href="products.php">
+                    <button style="color:green">Add new</button>
+                </a>
+                </div>
+                
+                
+                <div class="col-sm-9">
 
                     <?php 
                         include("../partials/connect.php");
