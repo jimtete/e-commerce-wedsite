@@ -25,7 +25,7 @@ include("connect.php");
 							</li>
 
 							<li>
-								<a href="shop.php">Shop</a>
+								<a href="product.php">Shop</a>
 							</li>
 
 
@@ -100,7 +100,7 @@ include("connect.php");
 				</li>
 
 				<li>
-					<a href="shop.php">Shop</a>
+					<a href="product.php">Shop</a>
 				</li>
 
 				
