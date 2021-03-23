@@ -8,7 +8,7 @@ include ("partials/head.php");
 	<?php
 	include("partials/header.php");
 	include("partials/slider.php");
-	include("partials/banner.php");
+	// include("partials/banner.php");
 	?>
 	
 	
